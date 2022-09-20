@@ -1,0 +1,25 @@
+.epg {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+
+  .date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .icon {
+      margin-right: 0.5rem;
+    }
+  }
+}

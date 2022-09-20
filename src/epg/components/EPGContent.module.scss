@@ -1,0 +1,122 @@
+.epg_content {
+  background-color: #010001;
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  .timeline {
+    position: absolute;
+    display: flex;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 26px;
+    background-color: red;
+    flex-direction: row;
+
+    .timeline_scrollable {
+      position: absolute;
+      top: 0;
+      left: 210px;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      .timeline_cell-container {
+        width: 6720px;
+        transform: translate(0px, 0px);
+        height: 100%;
+
+        .timeline_cell {
+          width: 140px;
+          height: 100%;
+          display: inline-block;
+          border-right: 1px solid #fff;
+          color: #fff;
+          padding: 0 15px;
+        }
+      }
+    }
+  }
+
+  .channel-sidebar {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    bottom: 0;
+    width: 210px;
+    z-index: 21;
+    overflow: hidden;
+    pointer-events: none;
+
+    .channel-sidebar_list {
+      display: flex;
+      flex-direction: column;
+      overflow: auto;
+      transform: translate(0px, 0px);
+
+      .channel {
+        background-color: #1a1a1a;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+
+        .channel_id p {
+          color: #ffffff;
+          font-size: 1.3rem;
+          font-weight: 600;
+          margin: 0;
+          padding: 0;
+        }
+
+        .channel_image {
+          width: 200px;
+          height: 100px;
+          margin: 0;
+          padding: 0;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+
+  .tv-grid {
+
+    .tv-grid_column {
+        position: relative;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+
+    display: flex;
+    .channel_programming {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: red;
+      .program {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .icon {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .spacer {
+    width: 100%;
+    height: 2rem;
+  }
+}
