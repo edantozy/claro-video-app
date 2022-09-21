@@ -12,7 +12,6 @@
     left: 0;
     right: 0;
     height: 26px;
-    background-color: red;
     flex-direction: row;
 
     .timeline_scrollable {
@@ -32,7 +31,6 @@
           width: 140px;
           height: 100%;
           display: inline-block;
-          border-right: 1px solid #fff;
           color: #fff;
           padding: 0 15px;
         }
@@ -54,15 +52,15 @@
       display: flex;
       flex-direction: column;
       overflow: auto;
-      transform: translate(0px, 0px);
 
       .channel {
         background-color: #1a1a1a;
         display: flex;
+        height: 100px;
         flex-direction: row;
         align-items: center;
-        margin-right: 0.5rem;
-        margin-bottom: 0.5rem;
+        margin-right: 6px;
+        margin-bottom: 6px;
 
         .channel_id p {
           color: #ffffff;
@@ -89,34 +87,26 @@
   }
 
   .tv-grid {
+    width: 100%;
+    height: 100%;
 
     .tv-grid_column {
-        position: relative;
-        flex-direction: column;
-        flex: 1 1 auto;
+      width: 100%;
+      position: relative;
+      flex-direction: column;
+      flex: 1 1 auto;
     }
 
     display: flex;
-    .channel_programming {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background-color: red;
-      .program {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        .icon {
-          margin-right: 0.5rem;
-        }
-      }
-    }
   }
 
   .spacer {
     width: 100%;
     height: 2rem;
+  }
+
+  .Grid {
+    background-color: black;
+    position: absolute;
   }
 }

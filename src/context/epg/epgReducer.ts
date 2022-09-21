@@ -5,6 +5,7 @@ type EPGActionType =
     | { type: '[EPG] - SET_SUBTITLE', payload: string }
     | { type: '[EPG] - SET_DESCRIPTION', payload: string }
     | { type: '[EPG] - SET_BACKGROUND_IMAGE', payload: string }
+    | { type: '[EPG] - SET_CHANNELS_INFO', payload: any }
 
 export const epgReducer = (state: EPGState, action: EPGActionType): EPGState => {
 
@@ -25,9 +26,19 @@ export const epgReducer = (state: EPGState, action: EPGActionType): EPGState => 
                 description: action.payload
             }
         case '[EPG] - SET_BACKGROUND_IMAGE':
+            if (action.payload === '') {
+                return {
+                    ...state
+                }
+            }
             return {
                 ...state,
                 backgroundImage: action.payload
+            }
+        case '[EPG] - SET_CHANNELS_INFO':
+            return {
+                ...state,
+                channelsInfo: action.payload
             }
         default:
             return state;
